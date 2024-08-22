@@ -1,0 +1,79 @@
+@font-face {
+  font-family: Montserrat;
+  font-weight: normal;
+  src: url("/fonts/Montserrat-Regular.otf");
+}
+
+:root {
+  --mainPanelPositionX: 30%;
+  --lyricsPanelPositionX: 80%;
+}
+
+body {
+  margin: 0;
+  background-color: #616168;
+  overflow: hidden;
+
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.blur {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  backdrop-filter: saturate(180%) blur(20px);
+  z-index: 1000;
+}
+
+.shadow {
+  position: fixed;
+  z-index: 1001;
+  top: 4%;
+  left: 2%;
+  min-width: 100%;
+  min-height: 100%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5) inset;
+}
+
+#background {
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  z-index: -10;
+
+  background-image: url("res/default.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* make the .middlePanel and the .rightPanel be side by side (they are both in the #foreground div) */
+#foreground {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.mainPanel {
+  position: absolute;
+  transform: translate(-50%);
+  left: var(--mainPanelPositionX);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.lyricPanel {
+  position: absolute;
+  transform: translate(-50%);
+  left: var(--lyricsPanelPositionX);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

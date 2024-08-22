@@ -1,0 +1,27 @@
+{
+  "imgSelect": {
+    "type": "folderDropdown",
+    "value": "forest.jpg",
+    "text": "Background",
+    "filter": "*.jpg|*.png",
+    "folder": "textures"
+  },
+  "mainPanelPositionX": {
+    "max": 100,
+    "min": 0,
+    "step": 0.1,
+    "text": "Main Panel Position",
+    "type": "slider",
+    "help": "Control the horizontal Position of the main panel",
+    "value": 30
+  },
+  "lyricsPanelPositionX": {
+    "max": 100,
+    "min": 0,
+    "step": 0.1,
+    "text": "Lyric Panel Position",
+    "type": "slider",
+    "help": "Control the horizontal Position of the lyric panel",
+    "value": 80
+  }
+}
